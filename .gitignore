@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.gradle
+/.idea
+/build
+server/**
+client/.yarn
+client/yarn.lock
+client/package-lock.json
+server/src/main/resources/**
+node_modules/
+node_modules/**
+server/src/main/webapp/**
+client/dist
