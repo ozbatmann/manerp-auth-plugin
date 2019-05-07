@@ -74,6 +74,20 @@ class AuthService {
         null
 
     }
+    def getAllUserListBySearchParam(JSONObject requestParams){
+        String fullAuthRestUrl = new StringBuilder().append(AUTH_REST_URL)
+                .append(Holders.config.manerp.auth.restMethod.user.getAllUserListBySearchParam.toString()).toString()
+
+        JSONObject resultJSON = RestUtil.callRestService(fullAuthRestUrl,requestParams)
+
+        if(resultJSON?.data){
+
+            return resultJSON?.data as JSONArray
+        }
+
+        null
+
+    }
     def addUser(JSONObject requestParams){
         String fullAuthRestUrl = new StringBuilder().append(AUTH_REST_URL)
                 .append(Holders.config.manerp.auth.restMethod.user.addUser.toString()).toString()

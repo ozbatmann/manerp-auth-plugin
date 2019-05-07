@@ -43,6 +43,9 @@ class AuthController {
     def getAllUserList(){
         render authService.getAllUserList((JSONObject)request.JSON) as JSON
     }
+    def getAllUserListBySearchParam(){
+        render authService.getAllUserListBySearchParam((JSONObject)request.JSON) as JSON
+    }
     def addUser(){
         render authService.addUser((JSONObject)request.JSON) as JSON
     }
